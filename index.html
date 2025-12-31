@@ -96,4 +96,15 @@
         setInterval(gameLoop, 1000);
         setInterval(randomEvent, 15000);
              }
+             function initMap() {
+        const cont = document.getElementById('mapContainer');
+        for(let i=0; i<16; i++) {
+            let d = document.createElement('div');
+            d.className = 'tile ' + (i===0 ? 'player' : 'enemy');
+            d.innerHTML = i===0 ? "HQ" : "ZONE "+(i+1);
+            d.onclick = () => {
+                document.querySelectorAll('.tile').forEach(x => x.classList.remove('selected'));
+                d.classList.add('selected');
+                selected = d;
+            };
          
