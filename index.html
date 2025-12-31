@@ -145,4 +145,19 @@
         let e = evs[Math.floor(Math.random()*evs.length)]; e.f();
         showEvent(lang === 'az' ? e.az : e.en, e.c);
             }
-                
+                function showEvent(t, c) {
+        const eb = document.getElementById('event-box');
+        eb.innerText = t; eb.style.color = c;
+        setTimeout(() => { eb.style.color = "var(--blue)"; eb.innerText = "..."; }, 4000);
+    }
+    function updateUI() {
+        document.getElementById('gold').innerText = gold;
+        document.getElementById('inf').innerText = inf;
+        document.getElementById('tnk').innerText = tnk;
+        document.getElementById('sci').innerText = sci;
+        document.getElementById('b-tech').innerText = `Tech (${tech*50}💡)`;
+    }
+</script>
+</body>
+</html>
+
