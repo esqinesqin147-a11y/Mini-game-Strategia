@@ -65,4 +65,17 @@
         az: {title:"STRATEGIA v1.5", start:"BAŞLA", gold:"Qızıl", inf:"Piyada", tnk:"Tank", sci:"Elm", atk:"HÜCUM ET", win:"QƏLƏBƏ!", loss:"Məğlubiyyət!", g0:"İqtisadçı (+Qızıl)", g1:"Hərbçi (-Qiymət)", g2:"Alim (+Elm)"},
         en: {title:"STRATEGY v1.5", start:"START", gold:"Gold", inf:"Infantry", tnk:"Tank", sci:"Science", atk:"ATTACK", win:"VICTORY!", loss:"Defeat!", g0:"Economist (+Gold)", g1:"Soldier (-Price)", g2:"Scientist (+Sci)"}
     };
+             function setLang(l, b) {
+        lang = l;
+        document.querySelectorAll('#menu .sel-btn').forEach(x => { if(x.parentNode.innerHTML.includes('Lang')) x.classList.remove('active')});
+        b.classList.add('active');
+        updateMenuUI();
+    }
+    function setGen(g, b) {
+        gen = g;
+        document.getElementById('g0').classList.remove('active');
+        document.getElementById('g1').classList.remove('active');
+        document.getElementById('g2').classList.remove('active');
+        b.classList.add('active');
+    }
          
