@@ -57,4 +57,12 @@
         <button onclick="buy(3)" id="b-plane" style="background:var(--blue)">Təyyarə (600$)</button>
         <button class="btn-atk" onclick="attack()" id="b-atk">HÜCUM ET</button>
         </div>
-     
+     <script>
+    let gold = 200, inf = 50, tnk = 0, planes = 0, sci = 0, tech = 1, provs = 1;
+    let lang = 'az', gen = 0, selected = null;
+
+    const texts = {
+        az: {title:"STRATEGIA v1.5", start:"BAŞLA", gold:"Qızıl", inf:"Piyada", tnk:"Tank", sci:"Elm", atk:"HÜCUM ET", win:"QƏLƏBƏ!", loss:"Məğlubiyyət!", g0:"İqtisadçı (+Qızıl)", g1:"Hərbçi (-Qiymət)", g2:"Alim (+Elm)"},
+        en: {title:"STRATEGY v1.5", start:"START", gold:"Gold", inf:"Infantry", tnk:"Tank", sci:"Science", atk:"ATTACK", win:"VICTORY!", loss:"Defeat!", g0:"Economist (+Gold)", g1:"Soldier (-Price)", g2:"Scientist (+Sci)"}
+    };
+         
