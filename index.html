@@ -34,4 +34,12 @@
             <button class="sel-btn active" onclick="setLang('az', this)">Azərbaycan</button>
             <button class="sel-btn" onclick="setLang('en', this)">English</button>
         </div>
-        
+               <div class="option-group">
+            <h2 id="m-gen">General</h2>
+            <button class="sel-btn active" onclick="setGen(0, this)" id="g0">İqtisadçı (+Qızıl)</button>
+            <button class="sel-btn" onclick="setGen(1, this)" id="g1">Hərbçi (-Qiymət)</button>
+            <button class="sel-btn" onclick="setGen(2, this)" id="g2">Alim (+Elm)</button>
+        </div>
+        <button onclick="start()" style="background:var(--green); padding: 15px 50px; font-size: 20px; margin-top: 20px;" id="m-start">BAŞLA</button>
+    </div>
+     
