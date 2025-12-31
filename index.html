@@ -86,4 +86,14 @@
         document.getElementById('g2').innerText = texts[lang].g2;
         document.getElementById('l-gold').innerText = texts[lang].gold;
         document.getElementById('l-inf').innerText = texts[lang].inf;
+                 document.getElementById('l-tnk').innerText = texts[lang].tnk;
+        document.getElementById('l-sci').innerText = texts[lang].sci;
+        document.getElementById('b-atk').innerText = texts[lang].atk;
+    }
+    function start() {
+        document.getElementById('menu').style.display = 'none';
+        initMap();
+        setInterval(gameLoop, 1000);
+        setInterval(randomEvent, 15000);
+             }
          
