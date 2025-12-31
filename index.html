@@ -11,4 +11,9 @@
               #header { background: var(--card); padding: 10px; display: flex; justify-content: space-around; border-bottom: 2px solid #334155; font-size: 12px; }
         .stat span { color: var(--gold); font-size: 16px; display: block; text-align: center; }
         #event-box { height: 45px; background: rgba(0,0,0,0.5); display: flex; align-items: center; justify-content: center; font-size: 13px; color: var(--blue); border-bottom: 1px solid #334155; text-align: center; padding: 0 10px; }
+                #mapContainer { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; padding: 10px; flex-grow: 1; overflow-y: auto; }
+        .tile { aspect-ratio: 1; background: var(--card); border: 2px solid #334155; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 10px; font-weight: bold; transition: 0.2s; text-align: center; }
+        .player { background: #064e3b; border-color: var(--green); }
+        .enemy { background: #450a0a; border-color: var(--red); }
+        .selected { border-color: white; transform: scale(1.05); z-index: 5; box-shadow: 0 0 10px white; }
         
