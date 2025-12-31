@@ -136,4 +136,13 @@
         } else { showEvent(lang === 'az' ? "Gücün çatmır!" : "Not enough power!", "var(--red)"); }
         updateUI();
          }
-         
+             function randomEvent() {
+        const evs = [
+            {az: "Mədən tapıldı! +400$", en: "Mine found! +400$", f: () => gold += 400, c: "var(--green)"},
+            {az: "Fırtına! Təyyarə itdi", en: "Storm! Plane lost", f: () => planes = Math.max(0, planes-1), c: "var(--red)"},
+            {az: "Xalqın dəstəyi! +50 Piyada", en: "Support! +50 Inf", f: () => inf += 50, c: "var(--green)"}
+        ];
+        let e = evs[Math.floor(Math.random()*evs.length)]; e.f();
+        showEvent(lang === 'az' ? e.az : e.en, e.c);
+            }
+                
